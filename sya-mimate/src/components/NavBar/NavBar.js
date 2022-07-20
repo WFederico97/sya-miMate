@@ -8,22 +8,28 @@ import './NavBar.css'
 function NavBarLogo() {
     return (
       <>
-      <Navbar bg="dark" variant="dark">
-        <Container >
-          <Navbar.Brand href="#home" className='brand'>
+      <Navbar collapseOnSelect expand="xl" bg="dark" variant="dark">
+        <Container className='d-flex' >
+          <Navbar.Brand href="#home" className='brand m-2'>
             <img
               alt=""
               src={logo}
-              className="d-inline-block align-center img-fluid logoMate"
+              className=" align-center img-fluid logoMate"
             />{' '}
-            SyA Mi Mate
+              <hr></hr>
+              <p className='text'> SyA Mi Mate</p>
+             
           </Navbar.Brand>
-          <Nav className="m-auto navLinks">
-            <Nav.Link href="#Bombillas">Bombillas</Nav.Link>
-            <Nav.Link href="#Yerbas">Yerbas</Nav.Link>
-            <Nav.Link href="#Termos">Termos</Nav.Link>
-            <Nav.Link href="#Accesorios">Accesorios</Nav.Link>
-          </Nav>
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          <Navbar.Collapse id="responsive-navbar-nav">
+            <Nav justify variant='tabs' className="m-auto navLinks">
+              <Nav.Link href="#Mates">Mates</Nav.Link>
+              <Nav.Link href="#Bombillas">Bombillas</Nav.Link>
+              <Nav.Link href="#Yerbas">Yerbas</Nav.Link>
+              <Nav.Link href="#Termos">Termos</Nav.Link>
+              <Nav.Link href="#Accesorios">Accesorios</Nav.Link>
+            </Nav>
+            </Navbar.Collapse>
         </Container>
       </Navbar>
     </>
