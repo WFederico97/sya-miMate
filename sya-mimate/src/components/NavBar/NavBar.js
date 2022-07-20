@@ -8,7 +8,7 @@ import './NavBar.css'
 function NavBarLogo() {
     return (
       <>
-      <Navbar collapseOnSelect expand="xl" bg="dark" variant="dark">
+      <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
         <Container className='d-flex' >
           <Navbar.Brand href="#home" className='brand m-2'>
             <img
