@@ -2,10 +2,8 @@ import logo from  '../Images/logo-mimate.png'
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
-import Form from 'react-bootstrap/Form';
-import Button from 'react-bootstrap/Button';
 import './NavBar.css'
-
+import CartWidget from '../CartWidget';
 
 
 function NavBarLogo() {
@@ -32,15 +30,7 @@ function NavBarLogo() {
               <Nav.Link href="#Termos">Termos</Nav.Link>
               <Nav.Link href="#Accesorios">Accesorios</Nav.Link>
             </Nav>
-            <Form className="d-flex">
-            <Form.Control
-              type="search"
-              placeholder="Buscar producto/s"
-              className="me-2"
-              aria-label="Buscar producto/s"
-            />
-            <Button variant="outline-light">Buscar</Button>
-          </Form>
+            <CartWidget/>
             </Navbar.Collapse>
         </Container>
       </Navbar>
