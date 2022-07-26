@@ -1,33 +1,33 @@
-import{ useState, useEffect} from 'react'
+import{ useState} from 'react'
+import './index.css'
 
 
-export default function Counter () {
-    const [Counter, setCounter] = useState(0);
+export default function Counter (props) {
+    const [Counter, setCounter] = useState(props.initial);
     
-
-    useEffect (() => {
-        return ( )=> {
-            
-        }
-    }, [Counter])
-
     function addCounter ( ){
-        setCounter (Counter + 1);
-        console.log('Agregaste un producto, bien ahi :D')
+        if (Counter >= props.stock){
+                alert(`El stock maximo es ${props.stock}`);
+        } else {
+            setCounter (Counter + 1);
+        }
 
     }
 
     function reduceCounter () {
-        setCounter (Counter - 1)
-        console.log('Quitaste un producto, mal ahi <:(')
+        if (Counter <= 1) {
+            alert("¡Usted no ha seleccionado ningun producto!")
+        } else {
+            setCounter (Counter - 1)
+        }
     }
 
     return (
-        <div className='container d-flex mb-3'>
-            <div className='d-flex row justify-content-center'>
-                <button className='col-4' onClick={addCounter}>+</button>
-                <p className='col-4 mb-2'> {Counter}</p>
-                <button className='col-4' onClick={reduceCounter}>-</button>    
+        <div className='container d-flex mb-3 justify-content-evenly'>
+            <div className='d-flex row col-6'>
+                <button className='col-4 btnAdd' onClick={addCounter}>+</button>
+                <span className='col-4'> {Counter}</span>
+                <button className='col-4 btnRedd' onClick={reduceCounter}>-</button>    
             </div>
         </div>
     )

@@ -14,9 +14,8 @@ function App() {
             </div>
             <br></br>
             <div id='Catalogo'>
-                <ItemListContainer/>
+                <ItemListContainer />
             </div>
-
           </div>
           
   )
