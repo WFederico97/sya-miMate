@@ -23,10 +23,10 @@ export default function Counter (props) {
     }
 
     return (
-        <div className='container d-flex mb-3 justify-content-evenly'>
-            <div className='d-flex row col-6'>
+        <div className='container d-flex  justify-content-center col-6'>
+            <div className='container d-flex align-items-center  fw-bolder'>
                 <button className='col-4 btnAdd' onClick={addCounter}>+</button>
-                <span className='col-4'> {Counter}</span>
+                <span className='col-4 text-center fs-4'> {Counter}</span>
                 <button className='col-4 btnRedd' onClick={reduceCounter}>-</button>    
             </div>
         </div>
